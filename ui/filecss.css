@@ -1,1 +1,8 @@
-
+td{
+    font: Comic sans;
+}
+.tab{
+    border:10px solid blue;
+    background-color:yellow;
+    
+}
