@@ -8,3 +8,10 @@ function moveRight(){
 img.onclick= function(){
     var interval= setInterval(moveRight,10);
 };
+var counter = document.getElementById('counter');
+var count=0;
+counter.onclick(function(){
+    count=count + 1;
+    var spn = document.getElementById('spn');
+    spn.innerHTML = count.toString();
+});
