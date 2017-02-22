@@ -12,7 +12,7 @@ request.onreadystatechange=function(){
       {
             var counter = request.responseText;
             var spn = document.getElementById('spn');
-            spn.innerHTML = count.toString();
+            spn.innerHTML = counter.toString();
       }
   }
 };
