@@ -10,8 +10,8 @@ img.onclick= function(){
 };
 var counter = document.getElementById('counter');
 var count=0;
-counter.onclick(function(){
+counter.onclick=function(){
     count=count + 1;
     var spn = document.getElementById('spn');
     spn.innerHTML = count.toString();
-});
+};
