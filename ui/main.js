@@ -24,7 +24,7 @@ request.send(null);
 
 //change the contents of a list
 
-var nameInput = document.getElementByID('name');
+var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit =  document.getElementById('btn');
 submit.onclick=function(){
