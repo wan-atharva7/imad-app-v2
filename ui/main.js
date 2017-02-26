@@ -29,12 +29,29 @@ var name = nameInput.value;
 var submit =  document.getElementById('btn');
 submit.onclick=function(){
   //Make a request to the server and send the name
-  //Capture the name and render it as list
-  var names = ['name1','name2','name3','name4'];
-  var list = '';
-  for(var i=0;i<names.length;i++){
-      list+='<li>'+names[i]+'</li>';
+  var request= new XMLHttpRequest();
+//
+request.onreadystatechange=function(){
+  if(request.readyState == XMLHttpRequest.DONE)
+  {
+      //take some action
+      if(request.status==200)
+      {
+            var names = request.responseText;
+            names = JSON.parse(names);
+            var list = '';
+            for(var i=0;i<names.length;i++){
+                list+='<li>'+names[i]+'</li>';
+            }
+            var ul = document.getElementById('ulist');
+            ul.innerHTML = list;
+      }
   }
-  var ul = document.getElementById('ulist');
-  ul.innerHTML = list;
 };
+//make request
+request.open('GET','http://wan-atharva7.imad.hasura-app.io/submit-name?name='+name,true);
+request.send(null);
+};
+
+  //Capture the name and render it as list
+  
