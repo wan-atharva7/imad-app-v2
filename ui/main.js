@@ -24,11 +24,12 @@ request.send(null);
 
 //change the contents of a list
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit =  document.getElementById('btn');
 submit.onclick=function(){
   //Make a request to the server and send the name
+  var nameInput = document.getElementById('name');
+var name = nameInput.value;
   var request= new XMLHttpRequest();
 //
 request.onreadystatechange=function(){
