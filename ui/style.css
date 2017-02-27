@@ -1,7 +1,8 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color:black; 
     margin-top: 75px;
+    color:red;
 }
 
 .center {
@@ -18,11 +19,4 @@ body {
 
 .img-medium {
     height: 200px;
-}
-p{
-    background-color:red;
-}
-
-ul li{
-    color:red;
 }
