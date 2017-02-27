@@ -23,7 +23,29 @@ request.send(null);
 
 
 //change the contents of a list
-
+var submit1 =  document.getElementById('art');
+submit.onclick=function(req,res){
+  var article = document.getElementById('article').value;
+  var request1 = new XMLHttpRequest();
+  request1.onreadystatechange=function(){
+    if(request1.readyState = XMLHttpRequest.DONE)
+    {
+        if(request1.status==200)
+        {
+            var articles = request1.responseText;
+            articles = JSON.parse(articles);
+            var list1 = '';
+            for(varj=0;j<artciles.length;j++){
+                list1+='<p>'+articles+'</p>';
+            }
+            var spn1 = document.getElementById('span1');
+            spn1.innerHTML = list;
+        }
+    }
+  };
+  request1.open('GET','http://wan-atharva7.imad.hasura-app.io/submit-?name='+name,true)
+  
+};
 
 var submit =  document.getElementById('btn');
 submit.onclick=function(){
@@ -47,7 +69,7 @@ request.onreadystatechange=function(){
             var ul = document.getElementById('ulist');
             ul.innerHTML = list;
       }
-  }
+ 
 };
 //make request
 request.open('GET','http://wan-atharva7.imad.hasura-app.io/submit-name?name='+name,true);
